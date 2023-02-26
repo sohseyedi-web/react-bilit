@@ -1,0 +1,121 @@
+.header{
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 5;
+  min-height: 100vh;
+
+
+
+  &-container{
+    width: 70%;
+    z-index: 5;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 3rem;
+
+    &__title{
+      font-size: 2rem;
+      color: #fff;
+      font-weight: 600;
+    }
+    &__subtitle{
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #fff;
+      margin: 1rem 0;
+    }
+    &__box{
+      width: 100%;
+      padding: 1.5rem .5rem;
+      background-color: rgba(0,0,0,.5);
+      display: flex;
+      justify-content: space-between;
+      text-align: right;
+      border-radius: .3rem;
+      position: relative;
+
+      &-btn{
+        background-color: #000000;
+        color: #fff;
+        border: none;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 47.8%;
+        font-weight: bold;
+        bottom: -20%;
+        visibility: visible;
+
+        &.btn-false{
+          visibility: hidden;
+
+        }
+      }
+
+
+      &-items{
+        display: flex;
+        flex-direction: column;
+        width: 23%;
+
+        label{
+          color: #fff;
+          margin-bottom: .5rem;
+        }
+        &-input{
+          outline: none;
+          border-radius: .3rem;
+          height: 37px;
+          width: 100%;
+          border: none;
+          text-align: center;
+        }
+      }
+    }
+
+
+    @media screen and (max-width: 768px){
+      width: 95%;
+      padding-top: 2rem;
+
+      &__box{
+        flex-wrap: wrap;
+
+        &-items{
+          width: 45%;
+          margin-bottom: .8rem;
+        }
+        &-btn{
+          right: 46%;
+          bottom: -15%;
+        }
+      }
+    }
+    @media screen and (max-width: 600px){
+      &__title{
+        font-size: 1.2rem;
+      }
+      &__subtitle{
+        font-size: .9rem;
+      }
+      &__box{
+        width: 100%;
+
+        &-btn{
+          bottom: -10%;
+          right: 44.5%;
+        }
+        &-items{
+          width: 48%;
+
+          label{
+            font-size: .9rem;
+          }
+        }
+      }
+    }
+  }
+
+}
